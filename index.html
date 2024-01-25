@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="mainApp.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <div class =  "settings-container">
+        <div class =  "dropdown">
+            <label for="serial-port">SERIAL PORT</label> 
+            <select name="serial-port" id="serial-port"> 
+                <option value="COM1">COM1</option> 
+                <option value="COM2">COM2</option>  
+            </select>
+        </div>
+        <div class = "dropdown">
+            <label for="baudrate">BAUD RATE</label> 
+            <select name="baudrate" id="baudrate"> 
+                <option value="9600">9600</option> 
+                <option value="115200">115200</option>  
+            </select>
+        </div>
+        <div class = "dropdown">
+            <label for="parity">PARITY</label> 
+            <select name="parity" id="parity"> 
+                <option value="none">None</option> 
+                <option value="even">Even</option>  
+                <option value="odd">Odd</option>
+            </select>
+        </div>
+        <div class = "dropdown">
+            <label for="stop-bits">STOP BITS</label> 
+            <select name="stop-bits" id="stop-bits"> 
+                <option value="One">One</option> 
+                <option value="Two">Two</option>  
+            </select>
+        </div>
+        <div class = "form-entry">
+            <form action="index.html" target="_self">
+                <label for="delay">DELAY(ms)</label><br>
+                <input type="number" id="delay" name="delay" min ="0" max = "60000" value = "1" required>
+            </form>
+
+        </div>
+        <div class = "form-entry">
+            <form action="index.html" target="_self">
+                <label for="timeout">TIMEOUT(ms)</label><br>
+                <input type="number" id="timeout" name="timeout" min="1000" max = "5000" value="2000" required>
+            </form>
+        </div>
+    </div>
+
+    <div class =  "settings-container">
+        <div class = "form-entry">
+            <form action="index.html" target="_self">
+                <label for="device-id">DEVICE ID</label><br>
+                <input type="number" id="device-id" name="device-id" min ="0" max = "247" value = "1" required>
+            </form>
+        </div>
+
+        <div class =  "dropdown command">
+            <label for="command">COMMAND</label> 
+            <select name="command" id="command"> 
+                <option value="read-holding-regs">Read Holding Register(s)</option> 
+                <option value="write-holding-regs">Write Holding Register(s)</option>  
+            </select>
+        </div>
+
+        <div class = "form-entry">
+            <form action="index.html" target="_self">
+                <label for="starting-address">ADDRESS</label><br>
+                <input type="number" id="starting-address" name="starting-address" min ="0" max = "65535" value = "1" required>
+            </form>
+        </div>
+        <div class = "form-entry">
+            <form action="index.html" target="_self">
+                <label for="register-qty">REG QTY</label><br>
+                <input type="register-qty" id="register-qty" name="register-qty" min ="0" max = "125" value = "1" required>
+            </form>
+        </div>
+        <div class = "dropdown">
+            <label for="mode">MODE</label> 
+            <select name="mode" id="mode"> 
+                <option value="single">Single</option> 
+                <option value="scan">Scan</option>  
+            </select>
+        </div>
+
+    </div>
+    <div class =  "settings-container">
+        <button type="button" class="start-btn">START</button>
+        <button type="button" class="stop-btn">STOP</button>
+    </div>
+    <div class = "output-terminal">
+        <div class="output-data">
+            <p>Connecting to target...</p>
+            <p>Reading Holding Registers...</p>
+            <p>Received Data: [0xFFFF1234, 0x7FFFFFFF, 0x12345678]</p>
+        </div>
+    </div>
+</body>
+</html>

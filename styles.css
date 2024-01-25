@@ -1,0 +1,137 @@
+
+body {
+    background-color: #d5d5d5;
+    background-color:  #656565;
+    background-color: #353535;
+    font-family:'Courier New', Courier, monospace;
+}
+.settings-container {
+    /* padding: 10px 0 10px 0;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    gap: 8px;
+    max-width: 1250px;
+    min-width: 750px;
+    margin:0 auto;
+}
+.settings-container > * , .dropdown select, .form-entry input, .command {
+    text-align: center;
+    color: #656565;
+    color: #c0ff6b;
+    background-color: #d5d5d5;
+    background-color: #c0ff6b;
+    background-color: #656565;
+    border: 1px black;
+    border: solid #c0ff6b;
+    border-width:  0 1px 1px  0;
+}
+
+.settings-container > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    max-width: 200px;
+    height: 70%;
+    flex: 1;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 4px;
+}
+
+
+.dropdown select, .form-entry input {
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    align-self: center;
+    max-width: 100px;
+}
+
+.command {
+    flex: 2;
+    max-width: 400px;
+
+}
+
+.command select {
+    max-width: 200px;
+}
+
+.form-entry input {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #555555;
+    border-radius: 5px;
+    border: 0 solid black;
+    border-width: 0 2px 2px 0;
+    outline: none;
+
+}
+
+.start-btn, .stop-btn{
+    background-color: #c0ff6b;
+    color: black;
+    font-size: 3rem;
+    max-width: 40%;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    max-height: 120px;
+    margin: 0 auto;
+}
+
+.start-btn:hover {
+    border-color: #c0ff6b;
+    border-width: 1px;
+    background-color: black;
+    color: #c0ff6b;
+}
+
+.stop-btn:hover {
+    border-color: #c0666b;
+    border-width: 1px;
+    background-color: black;
+    color: #c0666b;
+}
+
+.stop-btn {
+    background-color: #9e1b32;
+    background-color: #c0666b;
+    color: black;
+}
+
+.output-terminal{
+    background-color: #555555;
+    border: solid black 2px;
+    border-radius: 5px;
+    max-width: 1250px;
+    min-width: 750px;
+    height: 500px;
+    margin: 10px auto;
+}
+
+.output-data{
+    padding-left: 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+@media (max-width:950px){
+    .settings-container {
+        height: 120px;
+    }
+}
+/* 
+#ff124f orangish hot pink
+#ff00ao hot pink
+#fe75fe pink
+#7a04eb purple
+#120458 dark blue
+*/
