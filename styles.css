@@ -4,56 +4,74 @@ body {
     background-color:  #656565;
     background-color: #353535;
     font-family:'Courier New', Courier, monospace;
+
 }
+
+/* configure grid template, 2x6 */
 .settings-container {
-    /* padding: 10px 0 10px 0;  */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-content: center;
+    gap: 12px;
     max-width: 1250px;
     min-width: 750px;
-    margin:0 auto;
+    margin:0 auto; 
 }
-.settings-container > * , .dropdown select, .form-entry input, .command {
+
+/* Style text, border, and background for each setting box */
+.setting, select, input {
     text-align: center;
     color: #656565;
     color: #c0ff6b;
     background-color: #d5d5d5;
     background-color: #c0ff6b;
     background-color: #656565;
-    border: 1px black;
     border: solid #c0ff6b;
+    border-radius: 5px;
     border-width:  0 1px 1px  0;
 }
 
-.settings-container > * {
+/* Style  */
+.setting, button{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
-    max-width: 200px;
-    height: 70%;
-    flex: 1;
-    border-radius: 5px;
+    align-items: center;
     font-weight: bold;
     font-size: 1.25rem;
-    padding: 4px;
+    /* padding: 10px 0; */
 }
 
 
-.dropdown select, .form-entry input {
+
+.dropdown select, .entry input {
     border: none;
     font-size: 1rem;
-    outline: none;
+    /* outline: none; */
     align-self: center;
     max-width: 100px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
 }
 
+/* Style the input fields and remove default arrows */
+.entry input {
+
+    background-color: #555555;
+    border-radius: 5px;
+    border: 1px solid black;
+    border-width: 0 2px 2px 0;
+    outline: none;
+    appearance: textfield;
+}
+
+/* position modbus command setting box and double the size compared to the other settings boxes */
 .command {
-    flex: 2;
-    max-width: 400px;
+    grid-column: 2 / 4;
 
 }
 
@@ -61,30 +79,17 @@ body {
     max-width: 200px;
 }
 
-.form-entry input {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: #555555;
-    border-radius: 5px;
-    border: 0 solid black;
-    border-width: 0 2px 2px 0;
-    outline: none;
-
-}
-
 .start-btn, .stop-btn{
     background-color: #c0ff6b;
     color: black;
     font-size: 3rem;
-    max-width: 40%;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 14px;
     border-radius: 10px;
     border: 2px solid black;
-    max-height: 120px;
-    margin: 0 auto;
+}
+.start-btn {
+    grid-column: 2 / 4;
 }
 
 .start-btn:hover {
@@ -94,6 +99,13 @@ body {
     color: #c0ff6b;
 }
 
+.stop-btn {
+    grid-column: 4 / 6;
+    background-color: #9e1b32;
+    background-color: #c0666b;
+    color: black;
+}
+
 .stop-btn:hover {
     border-color: #c0666b;
     border-width: 1px;
@@ -101,11 +113,6 @@ body {
     color: #c0666b;
 }
 
-.stop-btn {
-    background-color: #9e1b32;
-    background-color: #c0666b;
-    color: black;
-}
 
 .output-terminal{
     background-color: #555555;
@@ -113,8 +120,9 @@ body {
     border-radius: 5px;
     max-width: 1250px;
     min-width: 750px;
-    height: 500px;
-    margin: 10px auto;
+    height: 100vh;
+    margin: 14px auto;
+    margin-bottom: 100px;
 }
 
 .output-data{
@@ -124,14 +132,5 @@ body {
 }
 
 @media (max-width:950px){
-    .settings-container {
-        height: 120px;
-    }
+/* Add responsive design here */
 }
-/* 
-#ff124f orangish hot pink
-#ff00ao hot pink
-#fe75fe pink
-#7a04eb purple
-#120458 dark blue
-*/
