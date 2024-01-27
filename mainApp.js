@@ -8,7 +8,6 @@ const defaultSerialSettings = {
     "mode": "single"
 }
 
-
 const defaultModbusConfigs = {
     "id": 1,
     "command": 3, //read holding regs
