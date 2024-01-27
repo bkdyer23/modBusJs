@@ -66,6 +66,7 @@ body {
     border-width: 0 2px 2px 0;
     outline: none;
     appearance: textfield;
+
 }
 
 /* position modbus command setting box and double the size compared to the other settings boxes */
