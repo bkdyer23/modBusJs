@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="mainApp.js"></script>
     <link rel = "stylesheet" href = "styles.css">
 </head>
 <body>
@@ -85,17 +84,16 @@
                 <option value="scan">Scan</option>  
             </select>
         </div>
-        <button type="button" class="start-btn">START</button>
-        <button type="button" class="stop-btn">STOP</button>
+        <button type="button" class="start-btn" onclick="start_mb_client()">START</button>
+        <button type="button" class="stop-btn" onclick="stop_mb_client()">STOP</button>
  
     </div>
     <div class = "output-terminal">
-        <div class="output-data">
-            <p>Connecting to target...</p>
-            <p>Reading Holding Registers...</p>
-            <p>Received Data: [0xFFFF1234, 0x7FFFFFFF, 0x12345678]</p>
+        <div id="output-data">
         </div>
     </div>
 
+
+    <script src="mainApp.js"></script>
 </body>
 </html>

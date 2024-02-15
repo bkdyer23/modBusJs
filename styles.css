@@ -125,7 +125,7 @@ body {
     margin-bottom: 100px;
 }
 
-.output-data{
+#output-data{
     padding-left: 20px;
     font-size: 1.25rem;
     font-weight: bold;
