@@ -33,6 +33,14 @@ const serialSettings = {
 }
 
 console.log(serialPortEl);
+document.addEventListener('DOMContentLoaded', function() {
+    const startBtnEl = document.querySelector(".start-btn");
+    const stopBtnEl = document.querySelector(".stop-btn");
+    startBtnEl.addEventListener("click", start_mb_client);
+    stopBtnEl.addEventListener("click", stop_mb_client);
+});
+
+
 function start_mb_client() {
     const serialSettings = {
         "port": serialPortEl.value,
